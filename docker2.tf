@@ -11,7 +11,7 @@ resource "aws_instance" "docker2" {
    }
 
   provisioner "file" {
-  source = "/home/join_swarm.sh"
+  source = "./join_swarm.sh"
   destination = "/home/ubuntu/join_swarm.sh"
 
   connection {

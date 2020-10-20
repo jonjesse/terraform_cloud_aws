@@ -4,6 +4,8 @@
 
 variable "vpc_id" {}
 
+variable "priv_key" {}
+
 data "aws_vpc" "vpc_2" {
    id = var.vpc_id
 }

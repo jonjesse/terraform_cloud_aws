@@ -39,7 +39,7 @@ resource "aws_instance" "docker1" {
    }
 
   provisioner "file" {
-  source = "/home/master.sh"
+  source = "./master.sh"
   destination = "/home/ubuntu/master.sh"
 
   connection {
@@ -51,7 +51,7 @@ resource "aws_instance" "docker1" {
   }
 
   provisioner "file" {
-  source = "/home/monitor.sh"
+  source = "./monitor.sh"
   destination = "/home/ubuntu/monitor.sh"
 
   connection {

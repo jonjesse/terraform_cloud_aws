@@ -7,6 +7,13 @@ terraform {
       version = "~> 3.0"
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "playgroundarea"
+    workspaces {
+      name = "aws_docker_stack"
+   }
+  }
 }
 
 provider "aws" {

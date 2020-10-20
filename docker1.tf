@@ -57,7 +57,7 @@ resource "aws_instance" "docker1" {
   connection {
     type = "ssh"
     user = "ubuntu"
-    private_key = file ("aws5")
+    private_key = var.priv_key
     host = aws_instance.docker1.public_ip
     }
   }
@@ -88,7 +88,7 @@ resource "aws_instance" "docker1" {
     connection {
      type = "ssh"
      user = "ubuntu"
-     private_key = file ("aws5")
+     private_key = var.priv_key
      host = aws_instance.docker1.public_ip
     }
    }

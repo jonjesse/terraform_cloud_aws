@@ -45,7 +45,7 @@ resource "aws_instance" "docker1" {
   connection {
     type = "ssh"
     user = "ubuntu"
-    private_key = file ("~/.ssh/aws5.pem")
+    private_key = file ("~/.ssh/aws5")
     host = aws_instance.docker1.public_ip
     }
   }
